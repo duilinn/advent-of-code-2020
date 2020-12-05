@@ -20,7 +20,7 @@ seatIds = []
 
 for i in range(len(seatCodes)):
     seatIds.append(getSeatId(seatCodes[i]))
-    
+
 #part 1 answer    
 print(max(seatIds))
 print(min(seatIds))
