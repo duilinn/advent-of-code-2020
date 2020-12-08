@@ -659,7 +659,7 @@ def runLoop(file, verbose = False):
             line += file[line][1]
         else:
             line += 1
-    if line > len(inputFile):
+    if line == len(inputFile):
         finished = True
     if verbose:
         print(str(len(file)) + " " + str(line))
@@ -669,11 +669,11 @@ def runLoop(file, verbose = False):
 
 def swap(code):
     if code == "jmp":
-        return "acc"
-    elif code == "acc":
-        return "jmp"
-    elif code == "nop":
         return "nop"
+    elif code == "nop":
+        return "jmp"
+    elif code == "acc":
+        return "acc"
     
 for i in range(len(inputFile)):
     newInput = deepcopy(inputFile)
